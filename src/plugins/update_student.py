@@ -3,7 +3,7 @@ def update_student(sql, data):
     cursor = conn.cursor()
 
     cursor.execute(
-        """UPDATE unexpo SET dia = ? WHERE expediente = ?""", data
+        """UPDATE unexpo SET dia = ?, hora = ?, turno = ?, semestre = ?, rendimiento = ?, academico = ? WHERE expediente = ?""", data
     )
 
     conn.commit()
